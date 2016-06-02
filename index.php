@@ -21,6 +21,9 @@ define('APP_DEBUG',True);
 define('CONF_EXT','.php');
 //define('CONF_EXT','.yaml');
 
+define('BIND_MODULE','Views');
+define('BUILD_DIR_SECURE',false);
+
 // 定义应用目录
 define('APP_PATH','./Application/');
 
