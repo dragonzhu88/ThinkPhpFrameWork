@@ -9,7 +9,7 @@
 namespace User\Controller;
 use Think\Controller;
 
-class BaseController
+class BaseController extends Controller
 {
     public function index(){
         echo 'base.index';
