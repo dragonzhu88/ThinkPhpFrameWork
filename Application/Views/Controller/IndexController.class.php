@@ -14,10 +14,11 @@ class IndexController extends Controller {
         $this->assign("email",$email);
         $this->assign("age",$age);
 
-       // $this->display();
-        $fetchContent = $this->fetch();
-        $fetchContent = str_replace('dragon','zdc',$fetchContent);
+        $this->display();
+//        $fetchContent = $this->fetch();
+//        $fetchContent = str_replace('dragon','zdc',$fetchContent);
+//
+//        $this->show($fetchContent);
 
-        $this->show($fetchContent);
     }
 }
