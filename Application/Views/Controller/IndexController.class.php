@@ -9,10 +9,12 @@ class IndexController extends Controller {
         $userName = 'dragon';
         $email = 'dragon@126.com';
         $age = 18;
+        $year = 1991;
 
         $this->assign("user",$userName);
         $this->assign("email",$email);
         $this->assign("age",$age);
+        $this->assign("year",$year);
 
         $this->display();
 //        $fetchContent = $this->fetch();

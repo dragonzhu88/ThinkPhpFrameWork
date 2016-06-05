@@ -8,4 +8,9 @@ return array(
     'DEFAULT_THEME' => 'default',
     'TMPL_DETECT_THEME' => 'true',
     'THEME_LIST' => 'default,admin',
+  //  'TMPL_L_DELIM' =>'{{', //左界定符
+  //  'TMPL_R_DELIM' =>'}}', //右界定符
+    'TMPL_PARSE_STRING' => array(
+        '__CDN__'=>'./Cdn'
+    )
 );

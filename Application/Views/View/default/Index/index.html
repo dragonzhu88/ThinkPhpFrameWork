@@ -1,15 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Dragon-ThinkPHP</title>
+    <include file="Public/head"/>
 </head>
+    <include file="Public/navbar" home="main page"/>
 <body>
 default<br>
 <a href="{:U('index',array('t'=>'default'))}">default</a>
 <a href="{:U('index',array('t'=>'admin'))}">admin</a>
-{$user}<br>
-{$email}<br>
-{$age}
+{$user|strtoupper}<br>
+{$email|str_replace='dragon','zdc',###|strtoupper}<br>
+{:strtoupper(str_replace('dragon','hack',$email))}<br>
+{$phone|default='none'}<br>
+{$year|getAge}<br>
+{$Think.server.DOCUMENT_ROOT}
+    <include file="Public/js"/>
 </body>
+
 </html>
