@@ -9,7 +9,7 @@ class IndexController extends Controller {
         $userName = 'dragon';
         $email = 'dragon@126.com';
         $age = 18;
-        $year = 1991;
+        $year = 1991; 
 
         $this->assign("user",$userName);
         $this->assign("email",$email);

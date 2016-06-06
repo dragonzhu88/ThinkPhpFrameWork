@@ -19,7 +19,7 @@ function get_user_friends(){
       array(
           'username' => 'zdc',
           'age' => 30,
-          'tags' => array('11','22','33')
+          'tags' => array('11','22','33') 
       ),
       array(
           'username' => 'dragon',
