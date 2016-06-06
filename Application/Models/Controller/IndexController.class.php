@@ -13,12 +13,47 @@ class IndexController extends Controller {
 //    $user_d_model=D('User');
 //    $empty_model=new Model();
 //    $empty_m_model=M();
-//    $emptu_d_model=D();
+//    $empty_d_model=D();
+//
+//        $user=D('User');
+//        dump($user->select());
+//
+//        $student=D('User');
+//        dump($student->db(1,'DB_2')->table('user')->select());
 
-        $user=D('User');
-        dump($user->select());
+       //$this->createUser();
+       // $this->updateUser(2);
+      //  $this->deleteUser(2);
+       //$this->listUser();
+        $this->showUser(1);
+    }
 
-        $student=D('User');
-        dump($student->db(1,'DB_2')->table('user')->select());
+    public function createUser(){
+        $userAttribute=array(
+          'name'=>'zdc',
+          'age'=>'77'
+        );
+        D('User')->add($userAttribute);
+    }
+
+    public function updateUser($userId){
+        $userUpdateAttribute=array(
+            'id'=>$userId,
+            'age'=>2
+        );
+
+        D('User')->save($userUpdateAttribute);
+    }
+
+    public function listUser(){
+        dump(D('User')->select());
+    }
+
+    public function deleteUser($userId){
+        D('User')->delete($userId);
+    }
+
+    public function showUser($userId){
+        dump(D('User')->find($userId));
     }
 }
