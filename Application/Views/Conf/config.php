@@ -12,5 +12,7 @@ return array(
   //  'TMPL_R_DELIM' =>'}}', //右界定符
     'TMPL_PARSE_STRING' => array(
         '__CDN__'=>'./Cdn'
-    )
+    ),
+    'TAGLIB_PRE_LOAD'=>'Views\TagLib\DragonTag'
+
 );
