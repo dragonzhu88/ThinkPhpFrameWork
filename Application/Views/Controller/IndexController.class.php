@@ -23,4 +23,9 @@ class IndexController extends Controller {
 //        $this->show($fetchContent);
 
     }
+//http://localhost/ThinkPhpFrameWork/index.php/Index/getFriends
+    public function getFriends(){
+        $this->assign('friends',get_user_friends());
+        $this->display();
+    }
 }

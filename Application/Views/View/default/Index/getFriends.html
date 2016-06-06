@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <volist name="friends" id="friend" empty="no friend">
+        {$friend['username']}({$friend['age']})
+        <compare name="friend['age']" value="30" type="gt">old</compare><br>
+        <if condition="$friend['age'] lt 18">
+            You can't not sign up.
+        <else/>
+            </if>you can sign up.
+        </if>
+        <volist name="friend['tags']" id="tag">
+            {$tag}
+        </volist>
+
+    </volist>
+
+<for start="0" end="5" step="1">
+    for{$i}<br>
+</for>
+
+<php>
+    for($i=0;$i<5;$i++){
+        echo "php for $i"."<br>";
+    }
+</php>
+
+</body>
+</html>
