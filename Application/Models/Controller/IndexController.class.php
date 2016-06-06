@@ -25,7 +25,8 @@ class IndexController extends Controller {
        // $this->updateUser(2);
       //  $this->deleteUser(2);
        //$this->listUser();
-        $this->showUser(1);
+      //  $this->showUser(1);
+        $this->sqlOperations();
     }
 
     public function createUser(){
@@ -55,5 +56,29 @@ class IndexController extends Controller {
 
     public function showUser($userId){
         dump(D('User')->find($userId));
+    }
+
+    public function sqlOperations(){
+        $userModel=D('User');
+
+//        $condition = array(
+//            'name' => 'zdc'
+//        );
+
+        $condition = array(
+            'name' => array('EQ','zdc')
+        );
+
+       // $result = $userModel->where("name='zdc'")->select();
+        $result = $userModel
+            ->where($condition)
+            ->order('id desc')
+           // ->limit(3)
+            ->page(2,10)
+            ->fetchSql(true)
+            ->select();
+        dump($result);
+
+        echo($userModel->getLastSql());
     }
 }
