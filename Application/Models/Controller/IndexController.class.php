@@ -24,9 +24,11 @@ class IndexController extends Controller {
        //$this->createUser();
        // $this->updateUser(2);
       //  $this->deleteUser(2);
-       //$this->listUser();
+        $this->createUserAR();
+        $this->updateUserAR(3);
+       $this->listUser();
       //  $this->showUser(1);
-        $this->sqlOperations();
+      //  $this->sqlOperations();
     }
 
     public function createUser(){
@@ -35,6 +37,26 @@ class IndexController extends Controller {
           'age'=>'77'
         );
         D('User')->add($userAttribute);
+    }
+
+    //activeRecord mode
+    public function createUserAR(){
+        $user=D('User');
+
+        $user->name='tom';
+        $user->age='70';
+
+        $user->add();
+    }
+
+    //activeRecord mode
+    public function updateUserAR($userId){
+        $user=D('User');
+
+        $user->id=$userId;
+        $user->age='7';
+
+        $user->save();
     }
 
     public function updateUser($userId){
